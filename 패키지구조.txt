@@ -1,0 +1,37 @@
+패키지구조
+	=== src/main/java
+	com.cafe24.springcontainer.user
+	com.cafe24.springcontainer.soundsystem
+	com.cafe24.springcontainer.videosystem
+		|---	DigitalVideoDisc
+		|---	Avengers
+		|---	DVDPlayer
+		|---	BlankDVD
+		|---	DVDPack
+
+	config.user
+		|---	UserConfig.java
+	config.soundsystem
+		|---	CDPlayerConfig.java	(자동)
+	config videosystem
+		|---	DVDPlayerConfig.java	(명시적 설정)
+
+	=== src/main/resources
+	config.user
+		|---	UserConfig.xml
+	config.soundsystem
+		|---	CDPlayerConfig.xml	(자동)
+	config videosystem
+		|---	DVDPlayerConfig.xml	(명시적 설정)
+
+	=== src/test/java
+	com.cafe24.springcontainer.soundsystem
+		|---	CDPlayerJavaConfigTest.java	(java설정을 가지고 테스트하는 CDPlayerConfig.java)
+		|---	CDPlayerXmlConfigTest.xml	(xml설정을 가지고 테스트하는 CDPlayerConfig.xml)
+	
+	com.cafe24.springcontainer.videosystem
+		|---	DVDPlayerJavaConfigTest.java
+		|---	DVDPlayerXmlConfigTest.java
+		|---	DVDPlayerMixingConfigTest01.java
+		|---	DVDPlayerMixingConfigTest02.java
+		|---	DVDPlayerMixingConfigTest03.java
